@@ -6,21 +6,6 @@ class Characterlist extends StatelessWidget {
 
   const Characterlist({super.key, required this.characters});
 
-  // @override
-  // Widget build(BuildContext context) {
-  //   return ListView.separated(
-  //       itemBuilder: (context, index) {
-  //         return ListTile(
-  //           title: Text(characters[index].name),
-  //           leading: Image.network(characters[index].image),
-  //         );
-  //       },
-  //       separatorBuilder: (_, __) {
-  //         return const Divider();
-  //       },
-  //       itemCount: characters.length);
-  // }
-
   @override
   Widget build(BuildContext context) {
     return GridView.builder(

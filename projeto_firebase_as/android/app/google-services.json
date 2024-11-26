@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "226224082125",
+    "project_id": "projeto-as-firebase-bern-6012e",
+    "storage_bucket": "projeto-as-firebase-bern-6012e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226224082125:android:027e16bdf6d5f01552ed84",
+        "android_client_info": {
+          "package_name": "com.example.projeto_firebase_as"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5-uWsv0NK8dIGJcL_W4GBbE3anWXFiE8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

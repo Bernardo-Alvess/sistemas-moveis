@@ -14,11 +14,14 @@ class Filter extends StatefulWidget {
 class _FilterState extends State<Filter> {
   @override
   Widget build(BuildContext context) {
-    return TextField(
-        onChanged: (value) {
-          widget.onFilter(value);
-        },
-        decoration: const InputDecoration(
-            border: OutlineInputBorder(), labelText: "Filtro"));
+    return Padding(
+      padding: const EdgeInsets.only(top: 10, left: 15, right: 15, bottom: 10),
+      child: TextField(
+          onChanged: (value) {
+            widget.onFilter(value);
+          },
+          decoration: const InputDecoration(
+              border: OutlineInputBorder(), labelText: "Filtro")),
+    );
   }
 }
