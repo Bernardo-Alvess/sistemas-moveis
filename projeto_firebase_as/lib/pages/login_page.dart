@@ -13,6 +13,15 @@ class LoginPage extends StatelessWidget {
   void login(BuildContext context) async {
     final authService = AuthService();
 
+    if (_emailController.text == '' || _passwordController == '') {
+      showDialog(
+          context: context,
+          builder: (context) => const AlertDialog(
+                title: Text('Preencha todos os campos!'),
+              ));
+      return;
+    }
+
     try {
       await authService.signInWithEmailPassword(
           _emailController.text, _passwordController.text);

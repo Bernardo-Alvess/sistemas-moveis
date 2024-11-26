@@ -11,8 +11,8 @@ class PokemonCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return ConstrainedBox(
       constraints: const BoxConstraints(
-        maxWidth: 356, // Limita a largura máxima do card a 400
-        maxHeight: 241, // Limita a altura máxima do card a 200
+        maxWidth: 356,
+        maxHeight: 241,
       ),
       child: Card(
         margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
@@ -22,7 +22,6 @@ class PokemonCard extends StatelessWidget {
         color: _getTypeBackgroundColor(pokemon.types[0]),
         child: Stack(
           children: [
-            // Número do Pokémon no canto superior direito
             Positioned(
               top: 8,
               right: 8,
@@ -35,19 +34,16 @@ class PokemonCard extends StatelessWidget {
                 ),
               ),
             ),
-            // Conteúdo principal (nome, tipos e sprite)
             Padding(
               padding: const EdgeInsets.all(16),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Coluna com o nome e os tipos
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        // Nome do Pokémon
                         Text(
                           pokemon.name.toUpperCase(),
                           style: const TextStyle(
@@ -57,7 +53,6 @@ class PokemonCard extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 8),
-                        // Chips dos tipos em formato de coluna
                         Wrap(
                           direction: Axis.vertical,
                           spacing: 8,
@@ -74,7 +69,6 @@ class PokemonCard extends StatelessWidget {
                       ],
                     ),
                   ),
-                  // Sprite do Pokémon no canto direito
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: Padding(
@@ -82,17 +76,14 @@ class PokemonCard extends StatelessWidget {
                       child: Stack(
                         alignment: Alignment.center,
                         children: [
-                          // Círculo no fundo da imagem
                           Container(
                             height: 125,
                             width: 125,
                             decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(
-                                  0.3), // Cor e opacidade do círculo
+                              color: Colors.white.withOpacity(0.3),
                               shape: BoxShape.circle,
                             ),
                           ),
-                          // Imagem do Pokémon
                           Image.network(
                             pokemon.sprite,
                             height: 150,
@@ -149,7 +140,7 @@ class PokemonCard extends StatelessWidget {
       case 'fighting':
         return Color.fromRGBO(194, 46, 40, 0.70);
       default:
-        return Color.fromRGBO(128, 128, 128, 0.70); // Default (grey)
+        return Color.fromRGBO(128, 128, 128, 0.70);
     }
   }
 
@@ -190,7 +181,7 @@ class PokemonCard extends StatelessWidget {
       case 'fighting':
         return Color.fromRGBO(194, 46, 40, 0.50);
       default:
-        return Color.fromRGBO(128, 128, 128, 0.50); // Default (grey)
+        return Color.fromRGBO(128, 128, 128, 0.50);
     }
   }
 }

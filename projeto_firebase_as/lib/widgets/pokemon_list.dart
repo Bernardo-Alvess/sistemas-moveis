@@ -19,8 +19,7 @@ class PokemonListView extends StatelessWidget {
             itemCount: pokemons.length,
             itemBuilder: (context, index) {
               final pokemon = pokemons[index];
-              return PokemonCard(
-                  pokemon: pokemon, index: index + 1); // Card customizado
+              return PokemonCard(pokemon: pokemon, index: index + 1);
             },
           );
         } else {

@@ -13,12 +13,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double statusWidth = MediaQuery.of(context).padding.top;
     return Scaffold(
       appBar: AppBar(
         title: Image.asset(
-          'assets/images/pokedex.png', // Caminho da sua imagem
-          height: 60, // Ajuste o tamanho se necessário
+          'assets/images/pokedex.png',
+          height: 60,
         ),
         centerTitle: true,
         actions: [IconButton(onPressed: logout, icon: Icon(Icons.logout))],
